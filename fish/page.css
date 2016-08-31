@@ -12,6 +12,19 @@ body {
 	background-color: #1d3f59;
 }
 
+.bad-approach .fish {
+	transition: top 6s, left 6s;
+}
+
+.good-approach .fish {
+	transition: transform 6s;
+}
+
+.best-approach .fish {
+	will-change: transform;
+	transition: transform 6s;
+}
+
 .fish {
 	position: absolute;
 	width: 50px;
@@ -19,8 +32,6 @@ body {
 	border-radius: 50%;
 	margin: -15px 0 0 -20px;
 	background-color: currentColor;
-	will-change: transform;
-	transition: transform 6s, top 6s, left 6s;
 }
 
 /* tail */
