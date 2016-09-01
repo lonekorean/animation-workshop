@@ -1,30 +1,27 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
-	margin: 20px;
-	font: 1.2em/1.5 'Open Sans', sans-serif;
+	margin: 60px;
+	color: #fff;
+	background-color: #1d3f59;
+	font: 1.2rem/1.5 'Open Sans', sans-serif;
+}
+
+.container {
+	width: 600px;
+	margin: 0 auto;
 }
 
 h1 {
 	margin: 0 0 20px;
-}
-
-.demos {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.demos li {
-	float: left;
-	width: 200px;
-	height: 100px;
-	margin: 10px;
-	padding: 20px;
-	border: 1px solid #ccc;
-	background-color: #eee;
+	font-size: 3rem;
 }
 
 a {
+	color: #d49919;
 	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
