@@ -44,6 +44,8 @@ h1 {
 	margin: -15px 0 0 -20px;
 	color: #d49919;
 	background-color: currentColor;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
 }
 
 /* tail */
@@ -73,7 +75,7 @@ h1 {
 }
 
 .bad-fish {
-	animation: 5s bad-ani infinite;
+	animation-name: bad-ani;
 }
 @keyframes bad-ani {
 	0%, 100% {
@@ -85,7 +87,7 @@ h1 {
 }
 
 .good-fish {
-	animation: 5s good-ani infinite;
+	animation-name: good-ani;
 }
 @keyframes good-ani {
 	0%, 100% {
