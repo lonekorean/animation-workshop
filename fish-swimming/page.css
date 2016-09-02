@@ -1,6 +1,7 @@
 body {
 	overflow: hidden;
 	margin: 0;
+	background-color: #1d3f59;
 }
 
 .pond {
@@ -9,7 +10,6 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-color: #1d3f59;
 }
 
 .bad-approach .fish {
