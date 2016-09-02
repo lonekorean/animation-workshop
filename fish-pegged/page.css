@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+	overflow: hidden;
+	margin: 0;
+	color: #fff;
+	background-color: #1d3f59;
+	font: 1.2rem/1.5 'Open Sans', sans-serif;
+}
+
+.pond {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	text-align: center;
+}
+
+.left-pond {
+	left: 0;
+	right: 50%;
+}
+
+.right-pond {
+	right: 0;
+	left: 50%;
+}
+
+h1 {
+	margin: 80px 0 160px;
+	font-weight: normal;
+	font-size: 4rem;
+}
+
+.fish-anchor {
+	display: inline-block;
+	position: relative;
+}
+
+.fish {
+	position: absolute;
+	width: 50px;
+	height: 30px;
+	border-radius: 50%;
+	margin: -15px 0 0 -20px;
+	color: #d49919;
+	background-color: currentColor;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+/* tail */
+.fish::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: -10px;
+	width: 0;
+	height: 0;
+	border-left: solid 25px currentColor;
+	border-top: solid 15px transparent;
+	border-bottom: solid 15px transparent;
+}
+
+/* eye */
+.fish::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 8px;
+	left: 34px;
+	width: 6px;
+	height: 6px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+.bad-fish {
+	animation-name: bad-ani;
+}
+@keyframes bad-ani {
+	0%, 100% {
+		top: 0;
+		left: -100px;
+	}
+	25% {
+		top: -100px;
+		left: 0;
+	}
+	50% {
+		top: 0;
+		left: 100px;
+ 	}
+	75% {
+		top: 100px;
+		left: 0;
+	}
+}
+
+.good-fish {
+	animation-name: good-ani;
+}
+@keyframes good-ani {
+	0%, 100% {
+		transform: translate(-100px, 0);
+	}
+	25% {
+		transform: translate(0, -100px);
+	}
+	50% {
+		transform: translate(100px, 0);
+	}
+	75% {
+		transform: translate(0, 100px);
+	}
+}
+
+.ruin {
+	position: absolute;
+	top: 310px;
+	left: calc(50% - 150px);
+	width: 300px;
+	padding: 20px;
+	border: 4px solid #fff;;
+	border-radius: 10px;
+	font-size: 2rem;
+	color: #fff;
+	background-color: #222;
+	cursor: pointer;
+	appearance: none;
+}
+
+.ruin:hover {
+	background-color: #333;
+}
