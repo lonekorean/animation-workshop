@@ -1,20 +1,28 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
 body {
-	margin:  40px 80px;
+	overflow: hidden;
+	margin: 0;
 	color: #fff;
 	background-color: #1d3f59;
-	font: 1.2rem/1.5 'Open Sans', sans-serif;
+	font: 1.5rem/1.5 'Open Sans', sans-serif;
 }
 
 .container {
-	width: 600px;
+	max-width: 900px;
 	margin: 0 auto;
+	padding: 40px;
 }
 
 h1 {
-	margin: 0 0 20px;
-	font-size: 3rem;
+	margin: 0 0 30px;
+	line-height: 1.2;
+	font-size: 3.5rem;
+	font-weight: normal;
 }
 
 a {
@@ -24,4 +32,58 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+.pond {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+}
+
+.left-pond {
+	left: 0;
+	right: 50%;
+}
+
+.right-pond {
+	right: 0;
+	left: 50%;
+}
+
+.fish {
+	position: absolute;
+	width: 50px;
+	height: 30px;
+	border-radius: 50%;
+	margin: -15px 0 0 -20px;
+	background-color: currentColor;
+}
+
+/* tail */
+.fish::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: -10px;
+	width: 0;
+	height: 0;
+	border-left: solid 25px currentColor;
+	border-top: solid 15px transparent;
+	border-bottom: solid 15px transparent;
+}
+
+/* eye */
+.fish::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 8px;
+	left: 34px;
+	width: 6px;
+	height: 6px;
+	background-color: #fff;
+	border-radius: 50%;
 }

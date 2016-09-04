@@ -1,17 +1,3 @@
-body {
-	overflow: hidden;
-	margin: 0;
-	background-color: #1d3f59;
-}
-
-.pond {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-
 .bad-approach .fish {
 	transition: top 6s, left 6s;
 }
@@ -23,41 +9,6 @@ body {
 .best-approach .fish {
 	will-change: transform;
 	transition: transform 6s;
-}
-
-.fish {
-	position: absolute;
-	width: 50px;
-	height: 30px;
-	border-radius: 50%;
-	margin: -15px 0 0 -20px;
-	background-color: currentColor;
-}
-
-/* tail */
-.fish::before {
-	content: '';
-	display: block;
-	position: absolute;
-	left: -10px;
-	width: 0;
-	height: 0;
-	border-left: solid 25px currentColor;
-	border-top: solid 15px transparent;
-	border-bottom: solid 15px transparent;
-}
-
-/* eye */
-.fish::after {
-	content: '';
-	display: block;
-	position: absolute;
-	top: 8px;
-	left: 34px;
-	width: 6px;
-	height: 6px;
-	background-color: #fff;
-	border-radius: 50%;
 }
 
 .fish-1 { color: #d49919; }
