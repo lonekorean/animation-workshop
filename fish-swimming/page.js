@@ -14,6 +14,9 @@ $(function() {
 		determinePondSize();
 		$(window).on('resize', determinePondSize);
 
+		// display count
+		$('h1').text(count + ' fish');		
+
 		// dump fish in
 		for (var i = 0; i < count; i++) {
 			spawnFish();

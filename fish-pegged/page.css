@@ -58,7 +58,7 @@ h2 {
 	}
 }
 
-.ruin {
+button {
 	position: absolute;
 	top: 540px;
 	left: calc(50%);
@@ -73,6 +73,6 @@ h2 {
 	appearance: none;
 }
 
-.ruin:hover {
+button:hover {
 	background-color: #333;
 }

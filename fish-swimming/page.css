@@ -1,3 +1,17 @@
+body {
+	overflow: hidden;
+}
+
+h1 {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	opacity: .2;
+	margin: 0;
+	font-size: 16rem;
+}
+
 .bad-approach .fish {
 	transition: top 6s, left 6s;
 }
