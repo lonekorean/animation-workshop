@@ -5,23 +5,27 @@
 }
 
 body {
-	overflow: hidden;
 	margin: 0;
 	color: #fff;
 	background-color: #1d3f59;
 	font: 1.5rem/1.5 'Open Sans', sans-serif;
 }
 
-.container {
+.prose {
 	max-width: 900px;
 	margin: 0 auto;
 	padding: 40px;
 }
 
 h1 {
-	margin: 0 0 30px;
+	margin: 0 0 40px;
 	line-height: 1.2;
 	font-size: 3.5rem;
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 2rem;
 	font-weight: normal;
 }
 
