@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Progress Bar</title>
+		<link href="../site.css" rel="stylesheet">
+		<link href="page.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="pond left-pond">
+			<h1>less awesome</h1>
+			<h2>(animating width)</h2>
+			<div class="anchor">
+				<div class="progress-container">
+					<div class="progress bad-progress"></div>
+				</div>
+<textarea>.bad-progress {
+  animation-name: bad-ani;
+}
+@keyframes bad-ani {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}</textarea>
+			</div>
+		</div>
+		<div class="pond right-pond">
+			<h1>more awesome</h1>
+			<h2>(animating transform)</h2>
+			<div class="anchor">
+				<div class="progress-container">
+					<div class="progress good-progress"></div>
+				</div>
+<textarea>.good-progress {
+  transform-origin: 0 0;
+  animation-name: good-ani;
+}
+@keyframes good-ani {
+  0% { transform: scaleX(0); }
+  100% { transform: scale(100%); }
+}</textarea>
+			</div>
+		</div>
+	</body>
+</html>
