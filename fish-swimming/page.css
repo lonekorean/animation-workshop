@@ -16,13 +16,16 @@ h1 {
 	transition: top 6s, left 6s;
 }
 
+.bad-approach.will-change .fish {
+	will-change: top, left;
+}
+
 .good-approach .fish {
 	transition: transform 6s;
 }
 
-.best-approach .fish {
+.good-approach.will-change .fish {
 	will-change: transform;
-	transition: transform 6s;
 }
 
 .fish-1 { color: #d49919; }

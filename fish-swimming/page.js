@@ -1,21 +1,24 @@
 var $pond, pondWidth, pondHeight;
 
 $(function() {
-	var approach, count, $pond, pondWidth, pondHeight;
+	var approach, willchange, $pond, pondWidth, pondHeight;
 	init();
 
 	function init() {
-		approach = getParam('approach');	// bad, good, best
-		count = getParam('count');			// some positive integer
+		approach = getParam('approach');
 
 		// setup pond
 		$pond = $('.pond');
 		$pond.addClass(approach + '-approach');
+		if(getParam('will-change') === 'true') {
+			$pond.addClass('will-change');
+		}
 		determinePondSize();
 		$(window).on('resize', determinePondSize);
 
 		// display count
-		$('h1').text(count + ' fish');		
+		var count = getParam('count');
+		$('h1').text(count + ' fish');
 
 		// dump fish in
 		for (var i = 0; i < count; i++) {
@@ -56,7 +59,6 @@ $(function() {
 				$fish.css({ 'left': x + 'px', 'top': y + 'px' });
 				break;
 			case 'good':
-			case 'best':
 				$fish.css('transform', 'translate(' + x + 'px, ' + y + 'px)');
 				break;
 		}
