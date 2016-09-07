@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Button Color</title>
+		<link href="../site.css" rel="stylesheet">
+		<link href="page.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="pond left-pond">
+			<h1>less awesome</h1>
+			<h2>(animating background-color)</h2>
+			<div class="anchor">
+				<button class="bad-button">Hover Me</button>
+<textarea>.bad-button {
+  animation-name: bad-ani;
+}
+@keyframes bad-ani {
+  0%, 100% {
+    background-color: #959595;
+  }
+  50% {
+    background-color: #d97eb6;
+   }
+}</textarea>
+			</div>
+		</div>
+		<div class="pond right-pond">
+			<h1>more awesome</h1>
+			<h2>(animating filter)</h2>
+			<div class="anchor">
+				<button class="good-button">Hover Me</button>
+<textarea>.good-button {
+  animation-name: good-ani;
+}
+@keyframes good-ani {
+  0%, 100% {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  50% {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+   }
+}</textarea>
+			</div>
+		</div>
+	</body>
+</html>

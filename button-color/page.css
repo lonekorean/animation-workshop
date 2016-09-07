@@ -1,0 +1,70 @@
+body {
+	color: #222;
+	background-color: #fff;
+}
+
+h1 {
+	margin: 40px 0 0;
+}
+
+h2 {
+	margin: 0 0 40px;
+}
+
+.anchor {
+	display: inline-block;
+	position: relative;
+}
+
+button {
+	display: block;
+	margin: 0 auto;
+	padding: 10px 60px;
+	border: none;
+	font-weight: bold;
+	font-size: 2rem;
+	color: #fff;
+	background-color: #d97eb6;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+.bad-button {
+	animation-name: bad-ani;
+}
+@keyframes bad-ani {
+	0%, 100% {
+		background-color: #959595;
+	}
+	50% {
+		background-color: #d97eb6;
+ 	}
+}
+
+.good-button {
+	animation-name: good-ani;
+}
+@keyframes good-ani {
+	0%, 100% {
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+	}
+	50% {
+		-webkit-filter: grayscale(0);
+		filter: grayscale(0);
+ 	}
+}
+
+textarea {
+	margin-top: 60px;
+	width: 430px;
+	height: 380px;
+	padding: 20px;
+	border: 2px dashed #999;
+	font: 1.4rem/1.4 monospace;
+	resize: none;
+}

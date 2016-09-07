@@ -70,6 +70,8 @@ button {
 	color: #fff;
 	background-color: #222;
 	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 	appearance: none;
 }
 
