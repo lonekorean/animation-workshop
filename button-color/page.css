@@ -21,10 +21,10 @@ button {
 	margin: 0 auto;
 	padding: 10px 60px;
 	border: none;
-	font-weight: bold;
 	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
 	color: #fff;
-	background-color: #d97eb6;
 	cursor: pointer;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -38,31 +38,30 @@ button {
 }
 @keyframes bad-ani {
 	0%, 100% {
-		background-color: #959595;
+		background-color: #dbdbdb;
 	}
 	50% {
-		background-color: #d97eb6;
+		background-color: #ffa8e1;
  	}
 }
 
 .good-button {
+	background-color: #ffa8e1;
 	animation-name: good-ani;
 }
 @keyframes good-ani {
 	0%, 100% {
-		-webkit-filter: grayscale(100%);
-		filter: grayscale(100%);
+		filter: grayscale(100%) brightness(115%);
 	}
 	50% {
-		-webkit-filter: grayscale(0);
-		filter: grayscale(0);
+		filter: none;
  	}
 }
 
 textarea {
 	margin-top: 60px;
-	width: 430px;
-	height: 380px;
+	width: 480px;
+	height: 400px;
 	padding: 20px;
 	border: 2px dashed #999;
 	font: 1.4rem/1.4 monospace;
