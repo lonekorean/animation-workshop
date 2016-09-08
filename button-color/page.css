@@ -40,7 +40,7 @@ button {
 	0%, 100% {
 		background-color: #dbdbdb;
 	}
-	50% {
+	80% {
 		background-color: #ffa8e1;
  	}
 }
@@ -53,7 +53,7 @@ button {
 	0%, 100% {
 		filter: grayscale(100%) brightness(115%);
 	}
-	50% {
+	80% {
 		filter: none;
  	}
 }
