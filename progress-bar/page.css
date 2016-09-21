@@ -20,14 +20,12 @@ h2 {
 	overflow: hidden;
 	width: 420px;
 	height: 20px;
-	border-radius: 10px;
 	background-color: #ddd;
-	transform: translateZ(0); /* makes border radius clip properly */
 }
 
 .progress {
 	height: 20px;
-	background-color: #9bc95b;
+	background-color: #95a9d6;
 	animation-duration: 4s;
 	animation-iteration-count: infinite;
 }
