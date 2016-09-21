@@ -1,11 +1,11 @@
 var $pond, pondWidth, pondHeight;
 
 $(function() {
-	var approach, willchange, $pond, pondWidth, pondHeight;
+	var $pond;
 	init();
 
 	function init() {
-		approach = getParam('approach');
+		var approach = getParam('approach');
 
 		// setup pond
 		$pond = $('.pond');
@@ -13,17 +13,13 @@ $(function() {
 		if(getParam('will-change') === 'true') {
 			$pond.addClass('will-change');
 		}
-		determinePondSize();
-		$(window).on('resize', determinePondSize);
 
 		// display count
 		var count = getParam('count');
 		$('h1').text(count + ' fish');
 
 		// dump fish in
-		for (var i = 0; i < count; i++) {
-			spawnFish();
-		}
+		spawnFish(count);
 	}
 
 	function getParam(key) {
@@ -31,37 +27,30 @@ $(function() {
 		return matches ? matches[1] : undefined;
 	}
 
-	function determinePondSize() {
-		pondWidth = $pond.width();
-		pondHeight = $pond.height();
-	}
+	function spawnFish(count) {
+		var pondWidth = $pond.width();
+		var pondHeight = $pond.height();
 
-	function spawnFish() {
-		// setup fish
-		var $fish = $('<div>', { class: 'fish' });
-		var num = getRandom(4) + 1;
-		$fish.addClass('fish-' + num);
-		positionFish($fish, -40, pondHeight / 2);
+		var $fishAnchors = [];
+		for (var i = 0; i < count; i++) {
+			// setup fish
+			var $fish = $('<div>', { class: 'fish' });
+			var num = getRandom(4) + 1;
+			$fish.addClass('fish-' + num);
+			$fish.css('animation-delay', -getRandom(8000) + 'ms');
 
-		// let fish go
-		$pond.append($fish);
-		setTimeout(moveFish.bind(this, $fish), getRandom(6000));
-	}
-
-	function moveFish($fish) {
-		positionFish($fish,  getRandom(pondWidth),  getRandom(pondHeight));
-		setTimeout(moveFish.bind(this, $fish), 7000);
-	}
-
-	function positionFish($fish, x, y) {
-		switch (approach) {
-			case 'bad':
-				$fish.css({ 'left': x + 'px', 'top': y + 'px' });
-				break;
-			case 'good':
-				$fish.css('transform', 'translate(' + x + 'px, ' + y + 'px)');
-				break;
+			// position fish
+			var $fishAnchor = $('<div>', { class: 'fish-anchor' });
+			$fishAnchor.css({
+				left: getRandom(pondWidth),
+				top: getRandom(pondHeight)
+			});
+			$fishAnchor.append($fish);
+			$fishAnchors.push($fishAnchor);
 		}
+
+		// add them all at once to minimize DOM thrashing
+		$pond.append($fishAnchors);
 	}
 
 	function getRandom(upper) {

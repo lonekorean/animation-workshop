@@ -12,16 +12,8 @@ h1 {
 	line-height: 1;
 }
 
-.fish-anchor {
-	position: absolute;
-}
-
 .bad-approach .fish {
-	animation: bad-swim 8s infinite;
-}
-@keyframes bad-swim {
-	0%, 100% { left: -200px; }
-	50% { left: 200px; }
+	transition: top 5s, left 5s;
 }
 
 .bad-approach.will-change .fish {
@@ -29,11 +21,7 @@ h1 {
 }
 
 .good-approach .fish {
-	animation: good-swim 8s infinite;
-}
-@keyframes good-swim {
-	0%, 100% { transform: translateX(-200px); }
-	50% { transform: translateX(200px); }
+	transition: transform 5s;
 }
 
 .good-approach.will-change .fish {
