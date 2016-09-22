@@ -20,6 +20,12 @@ $(function() {
 
 		// dump fish in
 		spawnFish(count);
+
+		$(window).on('resize', reload);
+	}
+
+	function reload() {
+		window.location.reload();
 	}
 
 	function getParam(key) {
