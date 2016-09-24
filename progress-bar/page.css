@@ -18,7 +18,7 @@ h2 {
 
 .progress-container {
 	overflow: hidden;
-	width: 420px;
+	width: 430px;
 	height: 20px;
 	background-color: #ddd;
 }
@@ -51,13 +51,13 @@ h2 {
 		transform: scaleX(0);
 	}
 	100% {
-		transform: scale(100%);
+		transform: scaleX(100%);
 	}
 }
 
 textarea {
 	margin-top: 60px;
-	width: 420px;
+	width: 430px;
 	height: 250px;
 	padding: 20px;
 	border: 2px dashed #999;
