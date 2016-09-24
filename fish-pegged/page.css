@@ -14,7 +14,7 @@ h2 {
 
 .fish {
 	color: #ffd47b;
-	animation-duration: 4s;
+	animation-duration: 3s;
 	animation-iteration-count: infinite;
 }
 
@@ -76,5 +76,5 @@ button {
 }
 
 button:hover {
-	background-color: #333;
+	background-color: #555;
 }
